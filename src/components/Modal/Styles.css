@@ -1,0 +1,111 @@
+.container-modal {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+.modal-box {
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-white);
+  column-gap: 30px;
+}
+
+.close-button {
+  margin-top: 20px;
+}
+
+.container-image-modal {
+  width: 670px;
+}
+
+.container-information-modal {
+  width: 100%;
+  height: 100%;
+  border: 1px solid pink;
+  column-gap: 3px;
+  row-gap: 10px;
+  padding: 20px;
+}
+
+.main-image-modal {
+  width: 100%;
+  object-fit: cover;
+}
+
+.title-modal {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: var(--font-family);
+  color: var(--color-title);
+  letter-spacing: 0.4px;
+  line-height: 1;
+}
+
+.id-modal {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: var(--font-family);
+  color: var(--color-paragraph);
+  letter-spacing: 0.28px;
+  line-height: 1.6;
+}
+
+.text-modal {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--font-family);
+  color: var(--color-paragraph);
+  letter-spacing: 0.28px;
+  line-height: 1.6;
+  padding: 16px 0;
+}
+
+.container-labels-modal {
+  width: 100%;
+  display: flex;
+  column-gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.subtitle-modal {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: var(--font-family);
+  color: var(--color-text);
+  letter-spacing: 0.28px;
+  line-height: 1.6;
+  margin: 30px 0 0;
+}
+
+.container-label-modal {
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-blue);
+  border-radius: 22px;
+  padding: 4px 10px;
+  font-size: 10px;
+  color: var(--color-blue);
+  line-height: 1.6;
+  font-family: var(--font-family);
+  letter-spacing: 0.2px;
+}
+
+.close-button {
+  top: -41.5rem;
+  right: 82rem;
+  border: 1px solid var(--color-white);
+  background-color: rgba(255, 255, 255, 0.743);
+  z-index: 1;
+}

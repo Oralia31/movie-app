@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-title: #273138;
+  --color-paragraph: #5c7284;
+  --color-blue: #4C42E4;
+  --color-white:#FFFFFF;
+  --font-family: "karla", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 5px 30px;
+  row-gap: 15px;
+}
