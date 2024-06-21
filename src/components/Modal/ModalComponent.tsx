@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { PropsModal } from "./Types";
+import { InfoDetails, PropsModal } from "./Types";
 import "./Styles.css";
 import { Modal, Box, Typography, Button } from "@mui/material";
 import { MoviesContext } from "@/src/app/Context/MoviesContext";
@@ -13,7 +13,7 @@ const ModalComponent: React.FC<PropsModal> = ({
   children,
 }) => {
   const { getMovieDetails } = useContext(MoviesContext);
-  const [movieDetails, setMovieDetails] = useState<any[]>([]);
+  const [movieDetails, setMovieDetails] = useState<InfoDetails[]>([]);
 
   const fetchGetMovieDetails = async (id: number) => {
     const details = await getMovieDetails(id);
@@ -41,7 +41,8 @@ const ModalComponent: React.FC<PropsModal> = ({
         <div>
           <div className="modal-box">
             <div className="container-image-modal">
-              <img
+            
+              {/*<img
                 className="main-image-modal"
                 src={`${Global.urlImage}${movieDetails.poster_path}`}
                 alt={movieDetails.title}
@@ -57,7 +58,7 @@ const ModalComponent: React.FC<PropsModal> = ({
                 {movieDetails.genres?.map((item, index) => (
                   <label key={index} className="container-label-modal">{item.name}</label>
                 ))}
-              </div>
+              </div>*/}
               <Typography>{children}</Typography>
             </div>
           </div>

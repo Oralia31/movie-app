@@ -6,3 +6,11 @@ export type PropsModal = {
     children?: React.ReactNode;
     movieId: number; 
 }
+
+export type InfoDetails = {
+    poster_path: string;
+    
+
+
+    
+}

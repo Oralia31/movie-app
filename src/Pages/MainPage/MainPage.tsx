@@ -88,7 +88,7 @@ const MainPage = () => {
               />
             ))}
           </div>
-          <Modal isOpen={isOpen} onClose={handleCloseModal} movieId={selectedMovieId} />
+          {/*<Modal isOpen={isOpen} onClose={handleCloseModal} movieId={selectedMovieId} >*/}
         </>
       )}
       <div className="container-pagination">
