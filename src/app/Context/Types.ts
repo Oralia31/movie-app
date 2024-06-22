@@ -6,13 +6,16 @@ export type PropsProvider = {
 };
 
 export type MoviesContextType = {
-  //movies: InfoMovies[];
-  //getMoviesAtWeek: () => Promise<Movie[]>;
   getMovies: (pages: number) => Promise<any[]>;
   getGenre: () => Promise<any[]>;
   getMovieDetails: (id: number) => Promise<InfoDetails>;
   genres: any[];
 };
+
+export type ArrayGenres = {
+  id: number;
+  name: string;
+}
 
 export type InfoMovies = {
   title: string;

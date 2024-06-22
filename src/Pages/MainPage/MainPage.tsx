@@ -50,7 +50,6 @@ const MainPage = () => {
   };
 
   const handleOpenModal = (id: any) => {
-    console.log("id que entra al abrir el modal....", id);
     setSelectedMovieId(id);
     setIsOpen(true);
   };
