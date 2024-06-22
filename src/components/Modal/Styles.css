@@ -3,6 +3,8 @@
   display: flex;
   justify-content: end;
   align-items: end;
+  max-height: 700px;
+  overflow-y: auto;
 }
 .modal-box {
   width: 100%;
@@ -103,8 +105,6 @@
 @media screen and (max-width: 641px) {
   .modal-box {
     flex-direction: column;
-    max-height: 700px;
-    overflow-y: auto;
   }
 
   .container-information-modal {
@@ -134,7 +134,6 @@
     margin-bottom: 20px;
   }
   .container-labels-modal {
-    margin-bottom: 30px;
-    margin-top: unset;
+    margin-bottom: 10px;
   }
 }
