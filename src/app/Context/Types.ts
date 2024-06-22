@@ -1,3 +1,4 @@
+import { InfoDetails } from "@/src/components/Modal/Types";
 import { ReactNode } from "react";
 
 export type PropsProvider = {
@@ -9,7 +10,7 @@ export type MoviesContextType = {
   //getMoviesAtWeek: () => Promise<Movie[]>;
   getMovies: (pages: number) => Promise<any[]>;
   getGenre: () => Promise<any[]>;
-  getMovieDetails: (pages: number) => Promise<any[]>;
+  getMovieDetails: (id: number) => Promise<InfoDetails>;
   genres: any[];
 };
 

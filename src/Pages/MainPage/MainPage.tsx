@@ -49,7 +49,8 @@ const MainPage = () => {
     }
   };
 
-  const handleOpenModal = (id: number) => {
+  const handleOpenModal = (id: any) => {
+    console.log("id que entra al abrir el modal....", id);
     setSelectedMovieId(id);
     setIsOpen(true);
   };
@@ -71,7 +72,17 @@ const MainPage = () => {
       {loading ? (
         <Loader />
       ) : deviceIsMobile ? (
-        <CardMobile list={movies}/>
+        movies.map((item, index) => (
+          <CardMobile
+            key={index}
+            title={item.title}
+            id={item.id}
+            image={item.poster_path}
+            vote_average={item.vote_average}
+            arrayLabels={item.genre_ids}
+            onClick={() => handleOpenModal(item.id)}
+          />
+        ))
       ) : (
         <>
           <div className="container-cards-main-page">
@@ -88,9 +99,14 @@ const MainPage = () => {
               />
             ))}
           </div>
-          {/*<Modal isOpen={isOpen} onClose={handleCloseModal} movieId={selectedMovieId} >*/}
+          
         </>
       )}
+      <Modal
+            isOpen={isOpen}
+            onClose={handleCloseModal}
+            movieId={selectedMovieId}
+          />
       <div className="container-pagination">
         <button className="button-pagination" onClick={handlePrevPage}>
           Anterior

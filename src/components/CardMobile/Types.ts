@@ -1,5 +1,10 @@
 export type CardTypes = {
-  list: any[];
+  //list: any[];
+  title: string;
+  id: number;
+  image: string;
+  vote_average: number;
+  arrayLabels: number[];
   onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 };
 
