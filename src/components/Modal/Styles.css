@@ -103,30 +103,38 @@
 @media screen and (max-width: 641px) {
   .modal-box {
     flex-direction: column;
+    max-height: 700px;
+    overflow-y: auto;
   }
+
+  .container-information-modal {
+    padding: 10px;
+  }
+
   .main-image-modal {
     width: 400px;
     height: 200px;
     object-fit: cover;
   }
 
-  
   .text-modal,
   .subtitle-modal {
     padding: 0 10px 10px;
   }
 
-  .title-modal, .id-modal{
+  .title-modal,
+  .id-modal {
     padding: 0 10px 0;
   }
   .subtitle-modal {
     margin: 0;
   }
 
-  .id-modal{
+  .id-modal {
     margin-bottom: 20px;
   }
-  .container-labels-modal{
+  .container-labels-modal {
     margin-bottom: 30px;
+    margin-top: unset;
   }
 }
