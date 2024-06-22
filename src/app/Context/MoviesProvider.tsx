@@ -5,6 +5,7 @@ import { MoviesContext } from "./MoviesContext";
 import { PropsProvider } from "./Types";
 import { Global } from "@/src/Config/Global";
 import axiosConfig from "@/src/Config/Axios";
+import { InfoDetails } from "@/src/components/Modal/Types";
 
 const MoviesProvider: React.FC<PropsProvider> = ({ children }) => {
   const [genres, setGenres] = useState([]);
@@ -37,7 +38,7 @@ const MoviesProvider: React.FC<PropsProvider> = ({ children }) => {
     }
   };
 
-  const getMovieDetails = async (id: number): Promise<any[]> => {
+  const getMovieDetails = async (id: number): Promise<InfoDetails> => {
     try {
       const response = await axiosConfig.get(
         `movie/${id}?api_key=${Global.apiKey}`
